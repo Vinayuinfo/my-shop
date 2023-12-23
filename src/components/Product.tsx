@@ -2,16 +2,20 @@ import React, { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import Rating from "../components/Rating/Rating";
+import Footer from "./Footer";
 
 
 const Product = () => {
   const [isData, setIsData] = useState([]);
+  const [isLoading , setIsLoading] = useState(false)
 
   const getData = async () => {
     try {
+      setIsLoading(true)
       const Response = await fetch("https://fakestoreapi.com/products");
       const data = await Response.json();
       console.log(data);
+      setIsLoading(false)
       setIsData(data);
     } catch (error) {
       console.log(error);
@@ -40,9 +44,16 @@ const Product = () => {
           <h4 className="text-lg">This is a our Product List</h4>
         </div>
 
+        {isLoading && (
+            <div className="min-h-[80vh] flex items-center justify-center">Loading...</div>
+           )} 
+
         <div>
           <div className="grid grid-cols-1 md:grid-cols-3 h-full gap-3">
 
+           
+  
+  
            {isData && isData.length > 0 && isData.map(({image,rating,title,price, category,description }, index)=>(
              <div key={index} className="col-span-1 border p-4 bg-gray-100 items-center rounded-lg">
               <div className="mr-4 flex space-x-4">
@@ -76,6 +87,7 @@ const Product = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

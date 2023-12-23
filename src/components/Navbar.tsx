@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="bg-gray-100 border-gray-200 dark:bg-gray-900">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link href="/">
             <Image
               src="/shopping-logo.svg"
