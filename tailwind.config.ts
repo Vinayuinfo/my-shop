@@ -15,6 +15,7 @@ const config: Config = {
       },
       fontFamily: {
         Oswald: ["Oswald", "sans-serif"],
+        Rubik: ["Rubik Doodle Shadow", "swap"]
       },
     },
   },

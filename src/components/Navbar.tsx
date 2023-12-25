@@ -8,13 +8,13 @@ const Navbar = () => {
       <nav className="bg-gray-100 border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link href="/">
-            <Image
+            {/* <Image
               src="/shopping-logo.svg"
               className="h-20 w-20"
               alt="My-Store"
               height={100}
               width={100}
-            />
+            /> */}<h1 className="font-Rubik text-2xl font-bold tracking-widest">SHOPPERS</h1>
           </Link>
           <button
             data-collapse-toggle="navbar-default"
@@ -49,7 +49,7 @@ const Navbar = () => {
                 <Link href="/addproduct">Add Product</Link>
               </li>
               <li className="text-xl font-medium tracking-wide hover:text-red-500 cursor-pointer font-Oswald">
-                <Link href="/aboutus">About us</Link>
+                <Link href="/about-us">About us</Link>
               </li>
               <li className="text-xl font-medium tracking-wide hover:text-red-500 cursor-pointer font-Oswald">
                 <Link href="/privacypolicy">Privacy Policy</Link>

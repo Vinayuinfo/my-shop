@@ -7,15 +7,16 @@ const Footer = () => {
     <footer className="bg-gray-100 dark:bg-gray-900">
     <div className="mx-auto w-full max-w-screen-2xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
-          <div className="mb-6 md:mb-0">
+          <div className="flex items-center">
           <Link href='/'>
-          <Image
+          {/* <Image
             src="/shopping-logo.svg"
             className="h-20 w-20"
             alt="My-Store"
             height={100}
             width={100}
-          /></Link>
+          /> */}<h1 className="font-Rubik text-2xl font-bold tracking-widest">SHOPPERS</h1>
+          </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
